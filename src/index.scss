@@ -28,6 +28,7 @@ textarea {
     width: 100%;
     height: 100px;
     border: 1px solid black;
+    font-size: 26px;
 
 }
 
@@ -50,6 +51,27 @@ textarea {
     align-items: center;
     background-color: #CAD0D0;
     border-color: black;
+}
+
+.btn.active {
+    background-color: #141018;
+    color: #CAD0D0;
+}
+
+.btn.remove {
+    animation: btn-animation 0.5s infinite;
+}
+
+@keyframes btn-animation {
+    0% {
+        background-color: #141018;
+        color: #CAD0D0;
+    }
+
+    100% {
+        background-color: #CAD0D0;
+        color: black;
+    }
 }
 
 .btn-backspace {
@@ -76,8 +98,18 @@ textarea {
     content: '';
     width: 15px;
     height: 15px;
-    border-top: 1.5px solid #141018;
-    border-right: 1.5px solid #141018;
+    border-top: 2px solid #141018;
+    border-right: 2px solid #141018;
+    transform: rotate(-45deg);
+    margin-top: 15px;
+}
+
+.active.btn-up::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #CAD0D0;
+    border-right: 2px solid #CAD0D0;
     transform: rotate(-45deg);
     margin-top: 15px;
 }
@@ -96,8 +128,18 @@ textarea {
     content: '';
     width: 15px;
     height: 15px;
-    border-top: 1.5px solid #141018;
-    border-right: 1.5px solid #141018;
+    border-top: 2px solid #141018;
+    border-right: 2px solid #141018;
+    transform: rotate(-135deg);
+    margin-left: 5px;
+}
+
+.active.btn-left::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #CAD0D0;
+    border-right: 2px solid #CAD0D0;
     transform: rotate(-135deg);
     margin-left: 5px;
 }
@@ -106,8 +148,18 @@ textarea {
     content: '';
     width: 15px;
     height: 15px;
-    border-top: 1.5px solid #141018;
-    border-right: 1.5px solid #141018;
+    border-top: 2px solid #141018;
+    border-right: 2px solid #141018;
+    transform: rotate(-225deg);
+    margin-bottom: 5px;
+}
+
+.active.btn-down::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #CAD0D0;
+    border-right: 2px solid #CAD0D0;
     transform: rotate(-225deg);
     margin-bottom: 5px;
 }
@@ -116,8 +168,18 @@ textarea {
     content: '';
     width: 15px;
     height: 15px;
-    border-top: 1.5px solid #141018;
-    border-right: 1.5px solid #141018;
+    border-top: 2px solid #141018;
+    border-right: 2px solid #141018;
+    transform: rotate(45deg);
+    margin-right: 5px;
+}
+
+.active.btn-right::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #CAD0D0;
+    border-right: 2px solid #CAD0D0;
     transform: rotate(45deg);
     margin-right: 5px;
 }
